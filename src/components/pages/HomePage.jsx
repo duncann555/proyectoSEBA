@@ -1,26 +1,47 @@
 import { Container, Row, Col, Form, Card, Button } from "react-bootstrap";
+import "../../styles/HomePage.css";
 
 const HomePage = () => {
+  // Lista de canciones falsas con imágenes de música
+  const songs = [
+    {
+      title: "Bohemian Rhapsody",
+      artist: "Queen",
+      img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format&fit=crop&q=80", // micrófono
+    },
+    {
+      title: "Billie Jean",
+      artist: "Michael Jackson",
+      img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&auto=format&fit=crop&q=80", // auriculares
+    },
+    {
+      title: "Shape of You",
+      artist: "Ed Sheeran",
+      img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&auto=format&fit=crop&q=80", // auriculares
+    },
+  ];
+
   return (
-    <Container style={{ backgroundColor: "var(--color-bg)", minHeight: "80vh", padding: "2rem" }}>
-      <h2 style={{ color: "var(--color-primary)" }}>Catálogo de Canciones</h2>
-      <Form className="mb-4">
-        <Form.Control 
-          type="text" 
-          placeholder="Buscar por nombre o artista..." 
-          style={{ backgroundColor: "var(--color-surface)", color: "var(--color-text)" }}
+    <Container className="home-container">
+      <h2 className="home-title text-center mb-5">Catálogo de Canciones</h2>
+
+      <Form className="home-search">
+        <Form.Control
+          type="text"
+          placeholder="Buscar por nombre o artista..."
+          className="home-search-input"
         />
       </Form>
 
       <Row>
-        {[1,2,3].map((_, i) => (
+        {songs.map((song, i) => (
           <Col md={4} key={i}>
-            <Card style={{ backgroundColor: "var(--color-surface)", marginBottom: "1rem" }}>
-              <Card.Img variant="top" src="https://via.placeholder.com/300" />
+            <Card className="home-card">
+              <Card.Img variant="top" src={song.img} alt={song.title} />
               <Card.Body>
-                <Card.Title style={{ color: "var(--color-text)" }}>Título Canción</Card.Title>
-                <Card.Text style={{ color: "var(--color-muted)" }}>Artista</Card.Text>
-                <Button style={{ backgroundColor: "var(--color-accent)", border: "none" }}>Ver Detalle</Button>
+                <Card.Title className="home-card-title">{song.title}</Card.Title>
+                <Card.Text className="home-card-artist">{song.artist}</Card.Text>
+                <Button className="btn-detail">Ver Detalle</Button>
               </Card.Body>
             </Card>
           </Col>

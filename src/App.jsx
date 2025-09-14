@@ -13,7 +13,7 @@ export default function AppLayout() {
       <Menu />
       <main style={{ padding: "2rem 0", flex: "1" }}>
         <Container>
-          <AdminPage></AdminPage>
+          <HomePage></HomePage>
         </Container>
       </main>
       <Footer />

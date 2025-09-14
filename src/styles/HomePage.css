@@ -1,0 +1,54 @@
+.home-container {
+  background-color: var(--color-bg);
+  min-height: 80vh;
+  padding: 2rem;
+}
+
+.home-title {
+  color: var(--color-primary);
+}
+
+.home-search {
+  margin-bottom: 1.5rem;
+}
+
+.home-search-input {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: none;
+}
+
+.home-search-input::placeholder {
+  color: var(--color-muted);
+}
+
+.home-card {
+  background-color: var(--color-surface);
+  margin-bottom: 1rem;
+  border: none;
+}
+
+.home-card-title {
+  color: var(--color-text);
+}
+
+.home-card-artist {
+  color: var(--color-muted);
+}
+
+.btn-detail {
+background-color: var(--color-accent);
+  border: none;
+  margin-top: 1rem;
+  color: #000;
+  font-weight: bold;
+  border-radius: 9999px;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(232, 121, 249, 0.5)
+}
+
+.btn-detail:hover {
+  background-color: #d946ef;
+  transform: scale(1.05);
+}

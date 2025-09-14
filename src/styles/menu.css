@@ -21,12 +21,19 @@
 
 /* Botón de ingresar */
 .btn-login {
-  background-color: var(--color-primary);
+background-color: var(--color-accent);
   border: none;
-  color: #fff;
+  margin-top: 1rem;
+  color: #000;
+  font-weight: bold;
+  border-radius: 9999px;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(232, 121, 249, 0.5)
 }
 
 .btn-login:hover {
-  background-color: var(--color-accent);
+  background-color: #d946ef;
+  transform: scale(1.05);
 }
 
