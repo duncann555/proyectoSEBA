@@ -10,6 +10,9 @@
   --color-danger: #f43f5e;    /* Rojo error */
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;700&display=swap');
+
+
 /*----------ESTO ES PARA BAJAR EL FOOTEER------------*/
 #root {
     min-height: 100vh;
@@ -23,3 +26,27 @@ main {
 }
 /*----------------------------------------------------*/
 
+/* Fuente por defecto */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.5px;
+}
+
+/* Texto secundario */
+p, span, li {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: var(--color-text);
+}
